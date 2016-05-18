@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Redwood\n"
+"POT-Creation-Date: 2015-06-25 19:09-0800\n"
+"PO-Revision-Date: 2015-06-25 19:10-0800\n"
+"Last-Translator: \n"
+"Language-Team: Solo Pine\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:12 ../content-none.php:18
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../archive.php:13
+msgid "<span>Daily Archives</span>"
+msgstr ""
+
+#: ../archive.php:14 ../archive.php:18 ../archive.php:22
+#, php-format
+msgid "<h1>%s</h1>"
+msgstr ""
+
+#: ../archive.php:17
+msgid "<span>Monthly Archives</span>"
+msgstr ""
+
+#: ../archive.php:21
+msgid "<span>Yearly Archives</span>"
+msgstr ""
+
+#: ../archive.php:25
+msgid "<h1>Archives</h1>"
+msgstr ""
+
+#: ../author.php:11
+msgid "All Posts By"
+msgstr ""
+
+#: ../category.php:11
+msgid "Browsing Category"
+msgstr ""
+
+#: ../category.php:12 ../search.php:12 ../tag.php:12
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:226 ../functions.php:360
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:227 ../functions.php:361
+msgid "Install Plugins"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:228 ../functions.php:362
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:229
+msgid "Something went wrong."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:240 ../functions.php:374
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:241
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:242
+#: ../class-tgm-plugin-activation.php:2114 ../functions.php:375
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:243
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:244
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:245
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1281
+#: ../class-tgm-plugin-activation.php:1465
+msgid "Private Repository"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1285
+#: ../class-tgm-plugin-activation.php:1468
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1290
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1293
+msgid "Required"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1293
+msgid "Recommended"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1296
+msgid "Not Installed"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1299
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1488
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\">Return to the Dashboard</"
+"a>"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1504
+msgid "Plugin"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1505
+msgid "Source"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1506
+msgid "Type"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1507
+msgid "Status"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1525
+msgid "Install"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:1526
+msgid "Activate"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2097
+msgid "Install package not available."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2098
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2099
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2100
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2101
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2102
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2113
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2236
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2237
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2241
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2242
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2242
+#: ../class-tgm-plugin-activation.php:2249
+msgid "Show Details"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2242
+#: ../class-tgm-plugin-activation.php:2249
+msgid "Hide Details"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2243
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2244
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2248
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2249
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2250
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../class-tgm-plugin-activation.php:2251
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../comments.php:6
+msgid "No Comments"
+msgstr ""
+
+#: ../comments.php:6
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:6
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:33
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:34
+msgid "Cancel Reply"
+msgstr ""
+
+#: ../comments.php:35
+msgid "Post Comment"
+msgstr ""
+
+#: ../content-none.php:5
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:13
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content.php:18
+msgid "Posted on"
+msgstr ""
+
+#: ../content.php:92
+msgid "Continue Reading"
+msgstr ""
+
+#: ../content.php:96
+msgid "Continue Reading<span class=\"more-line\"></span>"
+msgstr ""
+
+#: ../content.php:137
+msgid "By"
+msgstr ""
+
+#: ../functions.php:144
+msgid "Reply"
+msgstr ""
+
+#: ../functions.php:145
+msgid "Edit"
+msgstr ""
+
+#: ../functions.php:148
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php:150
+msgid "Comment awaiting approval"
+msgstr ""
+
+#: ../functions.php:173
+msgid "Older Posts <i class=\"fa fa-angle-double-right\"></i>"
+msgstr ""
+
+#: ../functions.php:174
+msgid "<i class=\"fa fa-angle-double-left\"></i> Newer Posts"
+msgstr ""
+
+#: ../functions.php:230
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:363
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../functions.php:376
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../functions/customizer/sp_custom_controller.php:45
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: ../inc/featured/featured.php:33
+msgid "Read More"
+msgstr ""
+
+#: ../inc/templates/related_posts.php:24
+msgid "You Might Also Like"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:19
+msgid "An About Me Widget"
+msgstr ""
+
+#: ../inc/widgets/about_widget.php:25
+msgid "Redwood: About Me"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:19
+msgid "A widget that displays a Facebook Like Box"
+msgstr ""
+
+#: ../inc/widgets/facebook_widget.php:25
+msgid "Redwood: Facebook Like Box"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:19
+msgid ""
+"A widget that displays your latest posts from all categories or a certain"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:25
+msgid "Redwood: Latest Posts"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:104
+msgid "Latest Posts"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:109
+msgid "Title:"
+msgstr ""
+
+#: ../inc/widgets/post_widget.php:127
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:19
+msgid "A widget that displays your social icons"
+msgstr ""
+
+#: ../inc/widgets/social_widget.php:25
+msgid "Redwood: Social Icons"
+msgstr ""
+
+#: ../search.php:11
+msgid "Search results for"
+msgstr ""
+
+#: ../searchform.php:2
+msgid "Search and hit enter..."
+msgstr ""
+
+#: ../tag.php:11
+msgid "Browsing Tag"
+msgstr ""
