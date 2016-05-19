@@ -193,8 +193,6 @@
 		width:100% !important;
 		border-left:none;
 		border-bottom:1px solid #e5e5e5;
-		height:48px;
-		line-height:48px;
 	}
 	.post-share-box:last-child {
 		border-bottom:none;

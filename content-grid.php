@@ -9,7 +9,7 @@
 	
 	<div class="post-header">
 		
-		<?php if(!get_theme_mod('sp_post_cat')) : ?>
+		<?php if(!get_theme_mod('ys_post_cat')) : ?>
 		<span class="cat"><?php the_category(' '); ?></span>
 		<?php endif; ?>
 		
@@ -25,12 +25,12 @@
 	
 	<div class="post-entry">
 						
-		<p><?php echo sp_string_limit_words(get_the_excerpt(), 31); ?>&hellip;</p>
+		<p><?php echo ys_string_limit_words(get_the_excerpt(), 31); ?>&hellip;</p>
 						
 	</div>
 	
 	<div class="list-meta">
-	<?php if(!get_theme_mod('sp_post_date')) : ?>
+	<?php if(!get_theme_mod('ys_post_date')) : ?>
 	<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
 	<?php endif; ?>
 	</div>

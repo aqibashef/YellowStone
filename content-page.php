@@ -19,7 +19,7 @@
 		<?php wp_link_pages(); ?>
 	</div>
 	
-	<?php if(get_theme_mod('sp_page_share') && !comments_open()) : else :?>
+	<?php if(get_theme_mod('ys_page_share') && !comments_open()) : else :?>
 	<div class="post-share">
 		
 		<?php if(comments_open()) : ?>
@@ -28,7 +28,7 @@
 		</div>
 		<?php endif; ?>
 		
-		<?php if(!get_theme_mod('sp_page_share')) : ?>
+		<?php if(!get_theme_mod('ys_page_share')) : ?>
 		<div class="post-share-box share-buttons">
 			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
 			<a target="_blank" href="https://twitter.com/home?status=Check%20out%20this%20article:%20<?php print themewagon_social_title( get_the_title() ); ?>%20-%20<?php echo urlencode(the_permalink()); ?>"><i class="fa fa-twitter"></i></a>

@@ -57,19 +57,19 @@ class themewagon_social_widget extends WP_Widget {
 		?>
 		
 			<div class="social-widget">
-				<?php if($facebook) : ?><a href="http://facebook.com/<?php echo get_theme_mod('sp_facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a><?php endif; ?>
-				<?php if($twitter) : ?><a href="http://twitter.com/<?php echo get_theme_mod('sp_twitter'); ?>" target="_blank"><i class="fa fa-twitter"></i></a><?php endif; ?>
-				<?php if($instagram) : ?><a href="http://instagram.com/<?php echo get_theme_mod('sp_instagram'); ?>" target="_blank"><i class="fa fa-instagram"></i></a><?php endif; ?>
-				<?php if($pinterest) : ?><a href="http://pinterest.com/<?php echo get_theme_mod('sp_pinterest'); ?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php endif; ?>
-				<?php if($bloglovin) : ?><a href="http://bloglovin.com/<?php echo get_theme_mod('sp_bloglovin'); ?>" target="_blank"><i class="fa fa-heart"></i></a><?php endif; ?>
-				<?php if($googleplus) : ?><a href="http://plus.google.com/<?php echo get_theme_mod('sp_google'); ?>" target="_blank"><i class="fa fa-google-plus"></i></a><?php endif; ?>
-				<?php if($tumblr) : ?><a href="http://<?php echo get_theme_mod('sp_tumblr'); ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a><?php endif; ?>
-				<?php if($youtube) : ?><a href="http://youtube.com/<?php echo get_theme_mod('sp_youtube'); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a><?php endif; ?>
-				<?php if($dribbble) : ?><a href="http://dribbble.com/<?php echo get_theme_mod('sp_dribbble'); ?>" target="_blank"><i class="fa fa-dribbble"></i></a><?php endif; ?>
-				<?php if($soundcloud) : ?><a href="http://soundcloud.com/<?php echo get_theme_mod('sp_soundcloud'); ?>" target="_blank"><i class="fa fa-soundcloud"></i></a><?php endif; ?>
-				<?php if($vimeo) : ?><a href="http://vimeo.com/<?php echo get_theme_mod('sp_vimeo'); ?>" target="_blank"><i class="fa fa-vimeo-square"></i></a><?php endif; ?>
-				<?php if($linkedin) : ?><a href="<?php echo get_theme_mod('sp_linkedin'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a><?php endif; ?>
-				<?php if($rss) : ?><a href="<?php echo get_theme_mod('sp_rss'); ?>" target="_blank"><i class="fa fa-rss"></i></a><?php endif; ?>
+				<?php if($facebook) : ?><a href="http://facebook.com/<?php echo get_theme_mod('ys_facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a><?php endif; ?>
+				<?php if($twitter) : ?><a href="http://twitter.com/<?php echo get_theme_mod('ys_twitter'); ?>" target="_blank"><i class="fa fa-twitter"></i></a><?php endif; ?>
+				<?php if($instagram) : ?><a href="http://instagram.com/<?php echo get_theme_mod('ys_instagram'); ?>" target="_blank"><i class="fa fa-instagram"></i></a><?php endif; ?>
+				<?php if($pinterest) : ?><a href="http://pinterest.com/<?php echo get_theme_mod('ys_pinterest'); ?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php endif; ?>
+				<?php if($bloglovin) : ?><a href="http://bloglovin.com/<?php echo get_theme_mod('ys_bloglovin'); ?>" target="_blank"><i class="fa fa-heart"></i></a><?php endif; ?>
+				<?php if($googleplus) : ?><a href="http://plus.google.com/<?php echo get_theme_mod('ys_google'); ?>" target="_blank"><i class="fa fa-google-plus"></i></a><?php endif; ?>
+				<?php if($tumblr) : ?><a href="http://<?php echo get_theme_mod('ys_tumblr'); ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a><?php endif; ?>
+				<?php if($youtube) : ?><a href="http://youtube.com/<?php echo get_theme_mod('ys_youtube'); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a><?php endif; ?>
+				<?php if($dribbble) : ?><a href="http://dribbble.com/<?php echo get_theme_mod('ys_dribbble'); ?>" target="_blank"><i class="fa fa-dribbble"></i></a><?php endif; ?>
+				<?php if($soundcloud) : ?><a href="http://soundcloud.com/<?php echo get_theme_mod('ys_soundcloud'); ?>" target="_blank"><i class="fa fa-soundcloud"></i></a><?php endif; ?>
+				<?php if($vimeo) : ?><a href="http://vimeo.com/<?php echo get_theme_mod('ys_vimeo'); ?>" target="_blank"><i class="fa fa-vimeo-square"></i></a><?php endif; ?>
+				<?php if($linkedin) : ?><a href="<?php echo get_theme_mod('ys_linkedin'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a><?php endif; ?>
+				<?php if($rss) : ?><a href="<?php echo get_theme_mod('ys_rss'); ?>" target="_blank"><i class="fa fa-rss"></i></a><?php endif; ?>
 			</div>
 			
 			

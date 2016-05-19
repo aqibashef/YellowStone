@@ -294,10 +294,6 @@ msgstr ""
 msgid "Continue Reading<span class=\"more-line\"></span>"
 msgstr ""
 
-#: ../content.php:137
-msgid "By"
-msgstr ""
-
 #: ../functions.php:144
 msgid "Reply"
 msgstr ""
@@ -316,11 +312,11 @@ msgid "Comment awaiting approval"
 msgstr ""
 
 #: ../functions.php:173
-msgid "Older Posts <i class=\"fa fa-angle-double-right\"></i>"
+msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
 #: ../functions.php:174
-msgid "<i class=\"fa fa-angle-double-left\"></i> Newer Posts"
+msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
 #: ../functions.php:230
@@ -337,7 +333,7 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: ../functions/customizer/sp_custom_controller.php:45
+#: ../functions/customizer/ys_custom_controller.php:45
 msgid "&mdash; Select &mdash;"
 msgstr ""
 

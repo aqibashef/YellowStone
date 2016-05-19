@@ -2,20 +2,32 @@
 					
 	<div class="post-header">
 		
-		<?php if(!get_theme_mod('sp_post_cat')) : ?>
-		<span class="cat"><?php the_category(' '); ?></span>
-		<?php endif; ?>
+		<div class="author_info clearfix">
+			<?php if(!get_theme_mod('ys_post_share_author_avatar')) : ?>		
+			<div class="author_avatar">
+				<?php echo get_avatar( get_the_author_ID(), 60); ?>
+			</div>
+			<?php endif; ?>
+
+			<?php if(!get_theme_mod('ys_post_share_author')) : ?>
+			<span class="post-share-box share-author">
+				<?php the_author_posts_link(); ?>
+			</span>
+			<?php endif; ?>
+			
+			<?php if(!get_theme_mod('ys_post_cat')) : ?>
+			<i>in</i> <span class="cat"><?php the_category(' '); ?></span>
+			<?php endif; ?>
+
+			<?php if(!get_theme_mod('ys_post_date')) : ?>
+			<div class="post-date"><?php _e( 'Posted on', 'themewagon' ); ?> <?php the_time( get_option('date_format') ); ?></div>
+			<?php endif; ?>
+		</div>
 		
 		<?php if(is_single()) : ?>
 			<h1><?php the_title(); ?></h1>
 		<?php else : ?>
 			<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php endif; ?>
-		
-		<span class="title-divider"></span>
-		
-		<?php if(!get_theme_mod('sp_post_date')) : ?>
-		<span class="post-date"><?php _e( 'Posted on', 'themewagon' ); ?> <?php the_time( get_option('date_format') ); ?></span>
 		<?php endif; ?>
 		
 	</div>
@@ -43,29 +55,29 @@
 	<?php elseif(has_post_format('video')) : ?>
 	
 		<div class="post-img">
-			<?php $sp_video = get_post_meta( $post->ID, '_format_video_embed', true ); ?>
-			<?php if(wp_oembed_get( $sp_video )) : ?>
-				<?php echo wp_oembed_get($sp_video); ?>
+			<?php $ys_video = get_post_meta( $post->ID, '_format_video_embed', true ); ?>
+			<?php if(wp_oembed_get( $ys_video )) : ?>
+				<?php echo wp_oembed_get($ys_video); ?>
 			<?php else : ?>
-				<?php echo $sp_video; ?>
+				<?php echo $ys_video; ?>
 			<?php endif; ?>
 		</div>
 	
 	<?php elseif(has_post_format('audio')) : ?>
 	
 		<div class="post-img audio">
-			<?php $sp_audio = get_post_meta( $post->ID, '_format_audio_embed', true ); ?>
-			<?php if(wp_oembed_get( $sp_audio )) : ?>
-				<?php echo wp_oembed_get($sp_audio); ?>
+			<?php $ys_audio = get_post_meta( $post->ID, '_format_audio_embed', true ); ?>
+			<?php if(wp_oembed_get( $ys_audio )) : ?>
+				<?php echo wp_oembed_get($ys_audio); ?>
 			<?php else : ?>
-				<?php echo $sp_audio; ?>
+				<?php echo $ys_audio; ?>
 			<?php endif; ?>
 		</div>
 	
 	<?php else : ?>
 		
 		<?php if(has_post_thumbnail()) : ?>
-		<?php if(!get_theme_mod('sp_post_thumb')) : ?>
+		<?php if(!get_theme_mod('ys_post_thumb')) : ?>
 		<div class="post-img">
 			<?php if(is_single()) : ?>
 				<?php the_post_thumbnail('full-thumb'); ?>
@@ -86,9 +98,9 @@
 			
 		<?php else : ?>
 		
-			<?php if(get_theme_mod('sp_post_summary') == 'excerpt') : ?>
+			<?php if(get_theme_mod('ys_post_summary') == 'excerpt') : ?>
 				
-				<p><?php echo sp_string_limit_words(get_the_excerpt(), 80); ?>&hellip;</p>
+				<p><?php echo ys_string_limit_words(get_the_excerpt(), 80); ?>&hellip;</p>
 				<p><a href="<?php echo get_permalink() ?>" class="more-link"><span class="more-button"><?php _e( 'Continue Reading', 'themewagon' ); ?></span></a>
 				
 			<?php else : ?>
@@ -101,7 +113,7 @@
 		
 		<?php wp_link_pages(); ?>
 		
-		<?php if(!get_theme_mod('sp_post_tags')) : ?>
+		<?php if(!get_theme_mod('ys_post_tags')) : ?>
 		<?php if(is_single()) : ?>
 		<?php if(has_tag()) : ?>
 			<div class="post-tags">
@@ -113,16 +125,16 @@
 		
 	</div>
 	
-	<?php if(get_theme_mod('sp_post_comment_link') && get_theme_mod('sp_post_share') && get_theme_mod('sp_post_share_author')) : else : ?>	
+	<?php if(get_theme_mod('ys_post_comment_link') && get_theme_mod('ys_post_share') && get_theme_mod('ys_post_share_author')) : else : ?>	
 	<div class="post-share">
 	
-		<?php if(!get_theme_mod('sp_post_comment_link')) : ?>
+		<?php if(!get_theme_mod('ys_post_comment_link')) : ?>
 		<div class="post-share-box share-comments">
 			<?php comments_popup_link( '<span>0</span> Comments', '<span>1</span> Comment', '<span>%</span> Comments', '', ''); ?>
 		</div>
 		<?php endif; ?>
 		
-		<?php if(!get_theme_mod('sp_post_share')) : ?>
+		<?php if(!get_theme_mod('ys_post_share')) : ?>
 		<div class="post-share-box share-buttons">
 			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
 			<a target="_blank" href="https://twitter.com/home?status=Check%20out%20this%20article:%20<?php print themewagon_social_title( get_the_title() ); ?>%20-%20<?php echo urlencode(the_permalink()); ?>"><i class="fa fa-twitter"></i></a>
@@ -132,22 +144,16 @@
 		</div>
 		<?php endif; ?>
 		
-		<?php if(!get_theme_mod('sp_post_share_author')) : ?>
-		<div class="post-share-box share-author">
-			<span><?php _e( 'By', 'themewagon' ); ?></span> <?php the_author_posts_link(); ?>
-		</div>
-		<?php endif; ?>
-		
 	</div>
 	<?php endif; ?>
 	
-	<?php if(!get_theme_mod('sp_post_author')) : ?>
+	<?php if(!get_theme_mod('ys_post_author')) : ?>
 	<?php if(is_single()) : ?>
 		<?php get_template_part('inc/templates/about_author'); ?>
 	<?php endif; ?>
 	<?php endif; ?>
 	
-	<?php if(!get_theme_mod('sp_post_related')) : ?>
+	<?php if(!get_theme_mod('ys_post_related')) : ?>
 	<?php if(is_single()) : ?>
 		<?php get_template_part('inc/templates/related_posts'); ?>
 	<?php endif; ?>

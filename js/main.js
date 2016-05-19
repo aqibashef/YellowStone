@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 	$('.featured-area .bxslider').bxSlider({
 		pager: false,
 		mode: 'fade',
-		auto: false,
+		auto: true,
 		pause: 7000,
 		speed: 800,
 		easing: 'ease-in-out',

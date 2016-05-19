@@ -1,4 +1,4 @@
-<div class="featured-area <?php if(!get_theme_mod('sp_promo')) : ?>nopromo<?php endif; ?>">
+<div class="featured-area <?php if(!get_theme_mod('ys_promo')) : ?>nopromo<?php endif; ?>">
 			
 	<div class="sideslides">
 	
@@ -6,9 +6,9 @@
 		
 			<?php
 				
-				$featured_cat = get_theme_mod( 'sp_featured_cat' );
-				$get_featured_posts = get_theme_mod('sp_featured_id');
-				$number = get_theme_mod( 'sp_featured_slider_slides' );
+				$featured_cat = get_theme_mod( 'ys_featured_cat' );
+				$get_featured_posts = get_theme_mod('ys_featured_id');
+				$number = get_theme_mod( 'ys_featured_slider_slides' );
 				
 				if($get_featured_posts) {
 					$featured_posts = explode(',', $get_featured_posts);

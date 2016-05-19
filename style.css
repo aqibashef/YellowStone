@@ -25,6 +25,21 @@ em { font-style: italic }
 a img { border:none }
 /**/
 
+/* Clearfix */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 body {
 	font-family:"Lora", sans-serif;
 	font-size:14px;
@@ -35,7 +50,7 @@ body {
 h1,h2,h3,h4,h5,h6, #nav-wrapper .menu li a, .feat-more, .cat, .post-share .post-share-comments,
 .about-title, #footer-social a, .more-link, .post-comments span.reply a, .widget .tagcloud a,
 .pagination a , .post-tags a, .slicknav_nav a  {
-	font-family:"Montserrat", sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 p {
@@ -104,7 +119,7 @@ a {
 	color:#fff;
 	line-height:50px;
 	font-size:11px;
-	font-weight:400;
+	font-weight:700;
 	letter-spacing:2px;
 	text-transform:uppercase;
 	display:block;
@@ -317,7 +332,7 @@ a {
 	color:#fff;
 	font-size:24px;
 	line-height: 1.4em;
-	font-weight:400;
+	font-weight:700;
 	text-transform:uppercase;
 	letter-spacing:3px;
 	margin-bottom:16px;
@@ -397,13 +412,13 @@ a {
 	/* border-left: 1px solid #FFF; */
 }
 .promo-link {
-	position: absolute; 
-	height: 100%; 
+	position: absolute;
+	height: 100%;
 	width: 100%;
 	top: 0;
 	left:0;
-	z-index: 999999;
-	display: block
+	z-index: 1;
+	display: block;
 }
 
 /****************************************/
@@ -411,18 +426,17 @@ a {
 /****************************************/
 
 .post {
-	margin-bottom:60px;
+	margin-bottom: 80px;
 }
 .post-header {
-	text-align:center;
 	margin-bottom:25px;
 }
 .post-header .cat {
-	display:block;
-	margin-bottom:7px;
+	display: inline-block;
+	margin-top: 12px;
 }
 .post-header .cat a {
-	font-weight:400;
+	font-weight:700;
 	font-size:11px;
 	letter-spacing:2px;
 	display:inline-block;
@@ -434,15 +448,15 @@ a {
 }
 .post-header h2, .post-header h1 {
 	margin-bottom:10px;
-	display:inline-block;
+	display: block;
 	max-width:80%;
 }
 .post-header h2 a, .post-header h1 {
 	font-size:24px;
-	letter-spacing:3px;
+	letter-spacing: 2px;
 	text-transform:uppercase;
 	color:#000;
-	font-weight:400;
+	font-weight: 700;
 	line-height:1.4em;
 	-o-transition:.25s;
 	-ms-transition:.25s;
@@ -454,15 +468,17 @@ a {
 	opacity:.6;
 }
 .title-divider {
-  border-top:2px solid;
+  border-top: 1px solid;
   display: block;
-  max-width: 48px;
-  margin: 0 auto 15px;
-  color: #00243b;
+  max-width: 80px;
+  margin: 0 0 15px;
+  color: #e5e5e5;
 }
 .post-date {
 	color:#999;
 	font-style:italic;
+	display: block;
+	font-size: 12px;
 }
 .post-img {
 	margin-bottom:25px;
@@ -559,7 +575,7 @@ a {
 
 /* Read More Button **********/
 .more-link {
-	text-align:center;
+	text-align: left;
 	display:block;
 	margin-top:30px;
 	text-transform:uppercase;
@@ -571,7 +587,11 @@ a {
 	-moz-transition:.3s;
 	-webkit-transition:.3s;
 	transition:.3s;
+	position: relative;
+	font-weight: 700;
 }
+
+.more-link:after {content: "»";font-family: serif;font-size: 22px;position: absolute;margin-top: -1px;margin-left: 4px;}
 a.more-link:hover {
 	text-decoration:none;
 	color:#C39F76;
@@ -596,16 +616,21 @@ a.more-link:hover {
 /* Post Share **********/
 .post-share {
 	border-top:1px solid #e5e5e5;
-	border-bottom:1px solid #e5e5e5;
 	margin-top:38px;
 	overflow:hidden;
 }
 .post-share-box {
-	float:left;
-	height:54px;
-	line-height:54px;
-	border-left:1px solid #e5e5e5;
-	text-align:center;
+	height: 30px;
+	display: inline-block;
+	margin-top: 12px;
+}
+
+.post-share-box.share-buttons {
+    text-align: right;
+}
+
+.author_info .post-share-box {
+    height: auto;
 }
 .post-share-box:first-child:nth-last-child(1) {
 	width:100%;
@@ -628,7 +653,7 @@ a.more-link:hover {
 	font-style:italic;
 }
 .post-share-box.share-comments a span {
-	font-family:"Montserrat";
+	font-family:"Lato";
 	font-size:14px;
 	color:#000;
 	font-style:normal;
@@ -648,12 +673,13 @@ a.more-link:hover {
 }
 
 .post-share-box.share-author a {
-	font-family:"Montserrat";
-	font-size:13px;
-	color:#000;
+	font-family:"Lato";
+	font-size: 11px;
+	color: #00243B;
 	text-transform:uppercase;
-	letter-spacing:1px;
+	letter-spacing: 1px;
 	font-style:normal;
+	font-weight: 700;
 }
 .post-share-box.share-author span {
 	color:#888;
@@ -700,6 +726,19 @@ a.more-link:hover {
 	font-size:14px;
 	color:#bbb;
 	margin-right:8px;
+}
+
+.author_avatar {
+    float: left;
+    margin-right: 16px;
+}
+
+.author_info {
+    margin-bottom: 12px;
+}
+
+.author_avatar > img {
+    border-radius: 100%;
 }
 
 /* Post related **********/
@@ -897,11 +936,11 @@ a.more-link:hover {
 	margin-bottom:11px;
 }
 .list-title-divider {
-	border-top:2px solid;
+	border-top: 1px solid;
 	display: block;
-	max-width: 40px;
+	max-width: 80px;
 	margin: 0 0 14px;
-	color: #00243b;
+	color: #e5e5e5;
 }
 
 
@@ -1320,6 +1359,9 @@ a.more-link:hover {
 	margin-top:55px;
 	overflow:hidden;
 	margin-bottom:45px;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 20px;
+	text-align: center;
 }
 
 .pagination a {
@@ -1328,24 +1370,38 @@ a.more-link:hover {
 	letter-spacing:2px;
 	text-transform:uppercase;
 	font-size:11px;
-	border-bottom:1px solid #e5e5e5;
-	padding-bottom:5px;
 	font-weight:700;
 	-o-transition:.3s;
 	-ms-transition:.3s;
 	-moz-transition:.3s;
 	-webkit-transition:.3s;
+	background: #EEE;
 	transition:.3s;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	line-height: 56px;
+	text-align: center;
+}
+
+.pagination .older a i {
+    font-size: 22px;
+    margin-left: 0px;
+}
+.pagination .newer a i {
+    font-size: 22px;
+    margin-left: 4px;
 }
 .pagination a:hover {
 	color:#999;
 }
 .pagination .newer {
-	float:left;
-	
+	display: inline-block;
+	float: right;
 }
 .pagination .older {
-	float:right;
+	display: inline-block;
+	float: left;
 }
 
 /****************************************/
@@ -1463,7 +1519,7 @@ input, textarea {
 	font-family:"Lora", sans-serif;
 }
 input[type=submit] {
-	font-family:"Montserrat", sans-serif;
+	font-family:"Lato", sans-serif;
 	text-transform:uppercase;
 	letter-spacing:2px;
 	background:#eee;
@@ -1730,7 +1786,7 @@ div.wpcf7 {
     text-decoration:none;
     color:#fff;
 	font-size:11px;
-	font-weight:400;
+	font-weight:700;
 	letter-spacing:2px;
 	text-transform:uppercase;
 }
