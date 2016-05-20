@@ -101,7 +101,7 @@
 			<?php if(get_theme_mod('ys_post_summary') == 'excerpt') : ?>
 				
 				<p><?php echo ys_string_limit_words(get_the_excerpt(), 80); ?>&hellip;</p>
-				<p><a href="<?php echo get_permalink() ?>" class="more-link"><span class="more-button"><?php _e( 'Continue Reading', 'themewagon' ); ?></span></a>
+				<p><a href="<?php echo get_permalink() ?>" class="more-link"><span class="more-button"><?php _e( 'Continue Reading <span>&raquo;</span>', 'themewagon' ); ?></span></a>
 				
 			<?php else : ?>
 				

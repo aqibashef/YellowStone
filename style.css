@@ -129,6 +129,12 @@ a {
 	-webkit-transition:.25s;
 	transition:.25s;
 }
+
+a .nav-home {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
 #nav-wrapper .menu li a:hover {
 	color:#999;
 }
@@ -591,7 +597,13 @@ a {
 	font-weight: 700;
 }
 
-.more-link:after {content: "»";font-family: serif;font-size: 22px;position: absolute;margin-top: -1px;margin-left: 4px;}
+.more-button > span {
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    position: relative;
+    top: 1px;
+}
+
 a.more-link:hover {
 	text-decoration:none;
 	color:#C39F76;
@@ -1359,9 +1371,9 @@ a.more-link:hover {
 	margin-top:55px;
 	overflow:hidden;
 	margin-bottom:45px;
-	border-bottom: 1px solid #eaeaea;
-	padding-bottom: 20px;
+	border-top: 1px solid #eaeaea;
 	text-align: center;
+	padding-top: 20px;
 }
 
 .pagination a {
@@ -1441,19 +1453,19 @@ a.more-link:hover {
 /* Footer social icons **********/
 #footer {
 	background:#00243b;
+	padding: 60px 0;
 }
 #footer-social {
-	border-bottom:1px solid;
-	border-color:#313131;
 	text-align:center;
-	padding:28px 0;
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 #footer-social a {
-	color:#fff;
-	font-size:12px;
+	color: rgb(255, 255, 255);
+	font-size: 11px;
 	text-transform:uppercase;
-	letter-spacing:1px;
-	margin:0 28px;
+	letter-spacing: 1px;
+	margin: 0 16px;
 	-o-transition:.3s;
 	-ms-transition:.3s;
 	-moz-transition:.3s;
@@ -1470,7 +1482,7 @@ a.more-link:hover {
 /* Footer Copyright **********/
 #footer-copyright {
 	text-align:center;
-	padding:28px 0;
+	padding: 16px 0 0 0;
 }
 .copyright {
 	color:#888;

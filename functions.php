@@ -387,9 +387,11 @@ function my_theme_register_required_plugins() {
 //Demo only functions
 if (isset($_GET['sidebar'])) {
 	set_theme_mod('ys_sidebar_homepage', true);
+	set_theme_mod('ys_sidebar_post', true);
 }
 else{
-	set_theme_mod('ys_sidebar_homepage', false);	
+	set_theme_mod('ys_sidebar_homepage', false);
+	set_theme_mod('ys_sidebar_post', false);
 }
 
 if (isset($_GET['home_layout'])) {
