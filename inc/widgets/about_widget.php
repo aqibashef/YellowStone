@@ -22,7 +22,7 @@ class themewagon_about_widget extends WP_Widget {
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_about_widget' );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_about_widget', __('Redwood: About Me', 'themewagon_about_widget'), $widget_ops, $control_ops );
+		$this->WP_Widget( 'themewagon_about_widget', __('Yellowstone: About Me', 'themewagon_about_widget'), $widget_ops, $control_ops );
 	}
 
 	/**

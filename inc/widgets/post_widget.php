@@ -22,7 +22,7 @@ class themewagon_latest_news_widget extends WP_Widget {
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_latest_news_widget' );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_latest_news_widget', __('Redwood: Latest Posts', 'themewagon_latest_news_widget'), $widget_ops, $control_ops );
+		$this->WP_Widget( 'themewagon_latest_news_widget', __('Yellowstone: Latest Posts', 'themewagon_latest_news_widget'), $widget_ops, $control_ops );
 	}
 
 	/**

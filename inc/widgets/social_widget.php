@@ -22,7 +22,7 @@ class themewagon_social_widget extends WP_Widget {
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_social_widget' );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_social_widget', __('Redwood: Social Icons', 'themewagon_social_widget'), $widget_ops, $control_ops );
+		$this->WP_Widget( 'themewagon_social_widget', __('Yellowstone: Social Icons', 'themewagon_social_widget'), $widget_ops, $control_ops );
 	}
 
 	/**

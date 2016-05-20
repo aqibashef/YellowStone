@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Redwood\n"
+"Project-Id-Version: Yellowstone\n"
 "POT-Creation-Date: 2015-06-25 19:09-0800\n"
 "PO-Revision-Date: 2015-06-25 19:10-0800\n"
 "Last-Translator: \n"
@@ -350,7 +350,7 @@ msgid "An About Me Widget"
 msgstr ""
 
 #: ../inc/widgets/about_widget.php:25
-msgid "Redwood: About Me"
+msgid "Yellowstone: About Me"
 msgstr ""
 
 #: ../inc/widgets/facebook_widget.php:19
@@ -358,7 +358,7 @@ msgid "A widget that displays a Facebook Like Box"
 msgstr ""
 
 #: ../inc/widgets/facebook_widget.php:25
-msgid "Redwood: Facebook Like Box"
+msgid "Yellowstone: Facebook Like Box"
 msgstr ""
 
 #: ../inc/widgets/post_widget.php:19
@@ -367,7 +367,7 @@ msgid ""
 msgstr ""
 
 #: ../inc/widgets/post_widget.php:25
-msgid "Redwood: Latest Posts"
+msgid "Yellowstone: Latest Posts"
 msgstr ""
 
 #: ../inc/widgets/post_widget.php:104
@@ -387,7 +387,7 @@ msgid "A widget that displays your social icons"
 msgstr ""
 
 #: ../inc/widgets/social_widget.php:25
-msgid "Redwood: Social Icons"
+msgid "Yellowstone: Social Icons"
 msgstr ""
 
 #: ../search.php:11
