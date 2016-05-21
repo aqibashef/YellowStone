@@ -95,7 +95,7 @@ class themewagon_facebook_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'page_url' ); ?>">Facebook Page URL:</label>
 			<input id="<?php echo $this->get_field_id( 'page_url' ); ?>" name="<?php echo $this->get_field_name( 'page_url' ); ?>" value="<?php echo $instance['page_url']; ?>" style="width:96%;" />
-			<small>EG. http://www.facebook.com/envato</small>
+			<small>EG. https://www.facebook.com/themewagon</small>
 		</p>
 
 		<!-- Faces -->

@@ -70,7 +70,7 @@ function themewagon_load_scripts() {
 
 	// Fonts
 	wp_enqueue_style('default_body_font', 'http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext');
-	wp_enqueue_style('default_heading_font', 'http://fonts.googleapis.com/css?family=Lato:400,700');
+	wp_enqueue_style('default_heading_font', 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
 	
 	// JS
 	wp_enqueue_script('jquery');
@@ -94,6 +94,7 @@ include('functions/customizer/ys_customizer_style.php');
 
 // Widgets
 include("inc/widgets/about_widget.php");
+include("inc/widgets/banner_widget.php");
 include("inc/widgets/social_widget.php");
 include("inc/widgets/post_widget.php");
 include("inc/widgets/facebook_widget.php");
@@ -311,6 +312,15 @@ function my_theme_register_required_plugins() {
 			'slug'     				=> 'vafpress-post-formats-ui-develop', // The plugin slug (typically the folder name)
 			'source'   				=> get_stylesheet_directory() . '/plugins/vafpress-post-formats-ui-develop.zip', // The plugin source
 			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
+			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		),
+		array(
+			'name'     				=> 'Maps Builder - Google Maps Plugin', // The plugin name
+			'slug'     				=> 'google-maps-builder', // The plugin slug (typically the folder name)
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins

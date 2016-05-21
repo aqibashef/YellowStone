@@ -41,7 +41,7 @@ a img { border:none }
 /* close commented backslash hack */
 
 body {
-	font-family:"Lora", sans-serif;
+	font-family: 'Droid Serif', serif;
 	font-size:14px;
 	color:#242424;
 	background:#fff;
@@ -130,7 +130,7 @@ a {
 	transition:.25s;
 }
 
-a .nav-home {
+.menu li a > i {
     font-size: 20px;
     position: relative;
     top: 2px;
@@ -503,6 +503,14 @@ a .nav-home {
 .post-entry p, .post-entry hr {
     margin-bottom:20px;
 }
+
+p.lead:first-letter {
+    font-size: 88px;
+    float: left;
+    line-height: 70px;
+    margin-right: 10px
+}
+
 .post-entry h1, .post-entry h2, .post-entry h3, .post-entry h4, .post-entry h5, .post-entry h6 {
 	color:#000;
 	font-weight:700;
@@ -708,11 +716,7 @@ a.more-link:hover {
 
 .author-img {
 	float:left;
-	margin-right:30px;
-}
-
-.author-img img {
-	border-radius:50%;
+	margin-right:16px;
 }
 
 .author-content  {
@@ -1127,6 +1131,11 @@ a.more-link:hover {
 	border: 1px solid #F1F1F1;
 	padding: 15px;
 }
+
+.themewagon_banner_widget {
+    border: none;
+    padding: 0;
+}
 .widget-title {
 	background: #f1f1f1;
 	text-align:center;
@@ -1310,11 +1319,11 @@ a.more-link:hover {
 	overflow:hidden;
 }
 #sidebar .instagram-pics li {
-	width: 30%;
+	width: 33.33333%;
 	display: inline-block;
 	border-bottom: none;
-	padding: 0;
-	margin: 0 0 10px 10px;
+	box-sizing: border-box;
+	padding: 0 0 10px 10px;
 	float:left;
 }
 #sidebar .instagram-pics li img {
@@ -1501,10 +1510,22 @@ a.more-link:hover {
 /****************************************/
 
 .archive-box {
-	text-align:center;
-	margin-bottom:40px;
-	border:1px solid #e8e8e8;
-	padding:28px;
+	margin-bottom: 60px;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.archive-box:after {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: #e5e5e5;
+    bottom: 0;
+    left: 0;
 }
 .archive-box h1 {
 	font-size:16px;
@@ -1532,7 +1553,7 @@ a.more-link:hover {
 /****************************************/
 /* Form styling **********/
 input, textarea {
-	font-family:"Lora", sans-serif;
+	font-family: 'Droid Serif', serif;
 }
 input[type=submit] {
 	font-family:"Lato", sans-serif;
