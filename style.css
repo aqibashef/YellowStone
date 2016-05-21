@@ -368,6 +368,21 @@ a {
 	color:#000;
 }
 
+.bx-wrapper .bx-controls-direction a {
+    background: rgb(255, 255, 255);
+    color: #00243B !important;
+    border-radius: 0 !important;
+    width: 20px !important;
+}
+
+.bx-wrapper .bx-prev {
+    left: 0 !important;
+}
+
+.bx-wrapper .bx-next {
+    right: 0 !important;
+}
+
 /****************************************/
 /* Promo Area
 /****************************************/
