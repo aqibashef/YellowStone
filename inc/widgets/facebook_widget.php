@@ -12,17 +12,13 @@ function themewagon_facebook_load_widget() {
 class themewagon_facebook_widget extends WP_Widget {
 
 	/**
-	 * Widget setup.
+	 * Sets up the widgets name etc
 	 */
-	function themewagon_facebook_widget() {
+	public function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'themewagon_facebook_widget', 'description' => __('A widget that displays a Facebook Like Box', 'themewagon_facebook_widget') );
 
-		/* Widget control settings. */
-		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_facebook_widget' );
-
-		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_facebook_widget', __('Yellowstone: Facebook Like Box', 'themewagon_facebook_widget'), $widget_ops, $control_ops );
+		parent::__construct( 'themewagon_facebook_widget', 'Yellowstone: Facebook Like Box', $widget_ops );
 	}
 
 	/**

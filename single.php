@@ -2,9 +2,9 @@
 	
 	<div class="container">
 		
-		<div id="content">
+		<div class="row">
 		
-			<div id="main" <?php if(get_theme_mod('ys_sidebar_post') == true) : ?>class="fullwidth"<?php endif; ?>>
+			<div class="<?php if(get_theme_mod('ys_sidebar_homepage') == true) { ?>col-sm-12 fullwidth<?php } else {?> col-sm-8 <?php } ?>" >
 			
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
@@ -16,5 +16,12 @@
 				
 			</div>
 
-<?php if(get_theme_mod('ys_sidebar_post')) : else : ?><?php get_sidebar(); ?><?php endif; ?>
+			<?php if(get_theme_mod('ys_sidebar_homepage')) : else : ?>
+
+					<div class="col-sm-4">
+						<?php get_sidebar(); ?>					
+					</div><!--/.col-sm-4-->
+
+			<?php endif; ?>
+
 <?php get_footer(); ?>

@@ -12,17 +12,13 @@ function themewagon_banner_load_widget() {
 class themewagon_banner_widget extends WP_Widget {
 
 	/**
-	 * Widget setup.
+	 * Sets up the widgets name etc
 	 */
-	function themewagon_banner_widget() {
+	public function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'themewagon_banner_widget', 'description' => __('An Banner Widget', 'themewagon_banner_widget') );
 
-		/* Widget control settings. */
-		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_banner_widget' );
-
-		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_banner_widget', __('Yellowstone: Banner', 'themewagon_banner_widget'), $widget_ops, $control_ops );
+		parent::__construct( 'themewagon_banner_widget', 'Yellowstone: Banner', $widget_ops );
 	}
 
 	/**

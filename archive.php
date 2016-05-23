@@ -2,9 +2,8 @@
 	
 	<div class="container">
 		
-		<div id="content">
-		
-			<div id="main" <?php if(get_theme_mod('ys_sidebar_archive') == true) : ?>class="fullwidth"<?php endif; ?>>
+		<div class="row">
+			<div class="<?php if(get_theme_mod('ys_sidebar_archive') == true) { ?>col-sm-12 fullwidth<?php } else {?> col-sm-8 <?php } if(get_theme_mod('ys_archive_layout') == 'full_grid') echo 'full_grid'?>" >
 			
 				<div class="archive-box">
 	
@@ -75,7 +74,13 @@
 					
 				<?php endif; ?>
 				
-			</div>
+			</di
+			<?php if(get_theme_mod('ys_sidebar_archive')) : else : ?>
 
-<?php if(get_theme_mod('ys_sidebar_archive')) : else : ?><?php get_sidebar(); ?><?php endif; ?>
+				<div class="col-sm-4">
+					<?php get_sidebar(); ?>					
+				</div><!--/.col-sm-4-->
+
+			<?php endif; ?>
+
 <?php get_footer(); ?>

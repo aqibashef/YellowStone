@@ -2,9 +2,9 @@
 	
 	<div class="container">
 		
-		<div id="content">
+		<div class="row">
 		
-			<div id="main">
+			<div class="col-sm-8">
 			
 				<div class="error-page">
 					
@@ -15,6 +15,7 @@
 				</div>
 				
 			</div>
-
-<?php get_sidebar(); ?>
+			<div class="col-sm-4">
+				<?php get_sidebar(); ?>					
+			</div><!--/.col-sm-4-->
 <?php get_footer(); ?>

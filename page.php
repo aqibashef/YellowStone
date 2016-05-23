@@ -2,9 +2,9 @@
 	
 	<div class="container">
 		
-		<div id="content">
+		<div class="row">
 		
-			<div id="main">
+			<div class="col-sm-8">
 			
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
@@ -16,5 +16,8 @@
 				
 			</div>
 
-<?php get_sidebar(); ?>
+			<div class="col-sm-4">
+				<?php get_sidebar(); ?>					
+			</div><!--/.col-sm-4-->
+					
 <?php get_footer(); ?>

@@ -12,17 +12,13 @@ function themewagon_latest_news_load_widget() {
 class themewagon_latest_news_widget extends WP_Widget {
 
 	/**
-	 * Widget setup.
+	 * Sets up the widgets name etc
 	 */
-	function themewagon_latest_news_widget() {
+	public function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'themewagon_latest_news_widget', 'description' => __('A widget that displays your latest posts from all categories or a certain', 'themewagon_latest_news_widget') );
 
-		/* Widget control settings. */
-		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_latest_news_widget' );
-
-		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_latest_news_widget', __('Yellowstone: Latest Posts', 'themewagon_latest_news_widget'), $widget_ops, $control_ops );
+		parent::__construct( 'themewagon_latest_news_widget', 'Yellowstone: Latest Posts', $widget_ops );
 	}
 
 	/**

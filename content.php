@@ -1,11 +1,11 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-12'); ?>>
 					
 	<div class="post-header">
 		
 		<div class="author_info clearfix">
 			<?php if(!get_theme_mod('ys_post_share_author_avatar')) : ?>		
 			<div class="author_avatar">
-				<?php echo get_avatar( get_the_author_ID(), 60); ?>
+				<?php echo get_avatar( get_the_author_meta('ID'), 60); ?>
 			</div>
 			<?php endif; ?>
 
@@ -126,16 +126,16 @@
 	</div>
 	
 	<?php if(get_theme_mod('ys_post_comment_link') && get_theme_mod('ys_post_share') && get_theme_mod('ys_post_share_author')) : else : ?>	
-	<div class="post-share">
+	<div class="post-share row">
 	
 		<?php if(!get_theme_mod('ys_post_comment_link')) : ?>
-		<div class="post-share-box share-comments">
+		<div class="col-sm-6 post-share-box share-comments">
 			<?php comments_popup_link( '<span>0</span> Comments', '<span>1</span> Comment', '<span>%</span> Comments', '', ''); ?>
 		</div>
 		<?php endif; ?>
 		
 		<?php if(!get_theme_mod('ys_post_share')) : ?>
-		<div class="post-share-box share-buttons">
+		<div class="col-sm-6 post-share-box share-buttons">
 			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
 			<a target="_blank" href="https://twitter.com/home?status=Check%20out%20this%20article:%20<?php print themewagon_social_title( get_the_title() ); ?>%20-%20<?php echo urlencode(the_permalink()); ?>"><i class="fa fa-twitter"></i></a>
 			<?php $pin_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>

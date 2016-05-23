@@ -12,17 +12,13 @@ function themewagon_about_load_widget() {
 class themewagon_about_widget extends WP_Widget {
 
 	/**
-	 * Widget setup.
+	 * Sets up the widgets name etc
 	 */
-	function themewagon_about_widget() {
+	public function __construct() {
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => 'themewagon_about_widget', 'description' => __('An About Me Widget', 'themewagon_about_widget') );
 
-		/* Widget control settings. */
-		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'themewagon_about_widget' );
-
-		/* Create the widget. */
-		$this->WP_Widget( 'themewagon_about_widget', __('Yellowstone: About Me', 'themewagon_about_widget'), $widget_ops, $control_ops );
+		parent::__construct( 'themewagon_about_widget', 'Yellowstone: About Me', $widget_ops );
 	}
 
 	/**

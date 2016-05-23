@@ -3,7 +3,7 @@
 // Set Content Width
 //////////////////////////////////////////////////////////////////
 if ( ! isset( $content_width ) )
-	$content_width = 1080;
+	$content_width = 1170;
 	
 //////////////////////////////////////////////////////////////////
 // Theme set up
@@ -49,6 +49,7 @@ add_action( 'wp_enqueue_scripts','themewagon_load_scripts' );
 function themewagon_load_scripts() {
 
 	// Register scripts and styles
+	wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css');
 	wp_register_style('ys_style', get_stylesheet_directory_uri() . '/style.css');
 	wp_register_style('fontawesome-css', get_template_directory_uri() . '/css/font-awesome.min.css');
 	wp_register_style('bxslider-css', get_template_directory_uri() . '/css/jquery.bxslider.css');
@@ -60,6 +61,7 @@ function themewagon_load_scripts() {
 	wp_register_script('ys_scripts', get_template_directory_uri() . '/js/main.js', 'jquery', '', true);
 	
 	// Enqueue scripts and styles
+	wp_enqueue_style('bootstrap');
 	wp_enqueue_style('ys_style');
 	wp_enqueue_style('fontawesome-css');
 	wp_enqueue_style('bxslider-css');
@@ -347,6 +349,16 @@ function my_theme_register_required_plugins() {
 		array(
 			'name'     				=> 'Responsive Lightbox by dFactory', // The plugin name
 			'slug'     				=> 'responsive-lightbox', // The plugin slug (typically the folder name)
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		),
+
+		array(
+			'name'     				=> 'Mailchimp for wordpress', // The plugin name
+			'slug'     				=> 'mailchimp-for-wp', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch

@@ -63,9 +63,9 @@
 			</div>
 			<?php endif ;?>
 			
-		</div>
+		</div><!--/container-->
 		
-	</div>
+	</div><!--/top-bar-->
 	
 	<header id="header" <?php if(!get_theme_mod('ys_featured_slider')) : ?>class="noslider"<?php endif; ?>>
 		

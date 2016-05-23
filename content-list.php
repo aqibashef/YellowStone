@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('list-item'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-12 list-item'); ?>>
 	
 	<?php if(has_post_thumbnail()) : ?>
 	<div class="post-img">
