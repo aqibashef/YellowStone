@@ -120,10 +120,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		);
 		
 		$wp_customize->add_setting(
-			'ys_responsive'
-		);
-		
-		$wp_customize->add_setting(
 	        'ys_home_layout',
 	        array(
 	            'default'     => 'full'
@@ -437,7 +433,7 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_footer_copyright',
 	        array(
-	            'default'     => '&copy; 2015 - Solo Pine. All Rights Reserved. Designed & Developed by <a href="http://themewagon.com">themewagon.com</a>'
+	            'default'     => '&copy; 2016 - ThemeWagon. All Rights Reserved. Designed & Developed by <a href="http://themewagon.com">themewagon.com</a>'
 	        )
 	    );
 		$wp_customize->add_setting(
@@ -735,20 +731,6 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 					'section'    => 'themewagon_new_section_general',
 					'settings'   => 'ys_favicon',
 					'priority'	 => 1
-				)
-			)
-		);
-		
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'responsive',
-				array(
-					'label'      => 'Disable Responsive',
-					'section'    => 'themewagon_new_section_general',
-					'settings'   => 'ys_responsive',
-					'type'		 => 'checkbox',
-					'priority'	 => 2
 				)
 			)
 		);

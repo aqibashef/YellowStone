@@ -13,7 +13,7 @@
 			
 			<?php get_template_part('inc/promo/promo'); ?>
 		
-			<div id="main" class="fullwidth">
+			<div class="fullwidth">
 			
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				

@@ -1392,6 +1392,7 @@ a.more-link:hover {
 	border-top: 1px solid #eaeaea;
 	text-align: center;
 	padding-top: 20px;
+	width: 100%;
 }
 
 .pagination a {
@@ -1860,4 +1861,248 @@ div.wpcf7 {
 
 .slicknav_menu .slicknav_no-text {
 	margin-top:7px;
+}
+
+
+#swipebox-bottom-bar {
+    top: 50%;
+    background: transparent;
+}
+
+#swipebox-bottom-bar.visible-bars{
+    transform: translate3d(0,0,0) !important;
+}
+@media screen and (min-width: 800px){
+	#swipebox-arrows {
+	    max-width: 90%
+	}
+}
+
+
+/*********************
+RESPONSIVE STYLES
+*********************/
+
+@media only screen and (min-width: 942px) and (max-width: 1170px) {
+	
+	/* Featured slider */
+	.feat-item {
+		height:461px;
+	}
+	
+	
+	/* Related Posts */
+	.item-related {
+		width:190px;
+		margin-right:20px;
+	}
+	.fullwidth .item-related {
+		width:292px;
+		margin-right:32px;
+	}
+	.fullwidth .item-related:last-child {
+		margin-right:0;
+	}
+	
+	/* Footer */
+	#footer-social a {
+		margin:0 19px;
+	}
+	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+	
+	
+	#nav-wrapper {
+		display:none;
+	}
+	
+	.slicknav_menu {
+		display:block;
+	}
+	
+	/* Featured slider */
+	.feat-item {
+		height:356px;
+	}
+	.feat-overlay h2 {
+		font-size:23px;
+	}
+	
+	/* Related items */
+	.item-related, .fullwidth .item-related {
+		width:230px;
+		margin-right:18px;
+	}
+	
+	.fullwidth .item-related:last-child {
+		margin-right:0;
+	}
+	
+	/* Footer */
+	#footer-social a span {
+		display:none;
+	}
+	#footer-social a {
+		font-size:18px;
+	}
+	
+}
+
+@media only screen and (max-width: 767px) {
+	
+	#logo img {
+		max-width:100%;
+	}
+	
+	#nav-wrapper {
+		display:none;
+	}
+	
+	.slicknav_menu {
+		display:block;
+	}
+	
+	
+	/* List layout */
+	.list-item .post-img img { max-width:90px; }
+	.list-item .post-img { margin-right:16px; }
+	.list-item p { display:none; }
+	.list-item .post-header h2 a { font-size:14px; letter-spacing:1px; }
+	.list-item .post-header h2 { margin-bottom:9px; }
+	.list-item .post-header { margin-bottom:0; }
+	#main.fullwidth .list-item .post-img img { max-width:90px; }
+	.list-title-divider { margin: 0 0 10px; }
+	
+	/* Featured slider */
+	.feat-item {
+		height:200px;
+	}
+	.feat-overlay h2 {
+		font-size:15px;
+	}
+	.feat-more {
+		font-size:9px;
+		padding:8px 9px 9px 10px;
+	}
+	.feat-inner {
+		max-width:80%;
+	}
+	.feat-overlay h2 {
+		margin-bottom:12px;
+	}
+	.feat-overlay .cat a {
+		margin:0 3px 10px;
+	}
+	
+	/* Promo Boxes */
+	.promo-item {
+		width:100%;
+		height:176px;
+		margin-bottom:30px;
+	}
+	
+	/* Related items */
+	.item-related, #main.fullwidth .item-related {
+		width:300px;
+		margin-right:0;
+		margin-bottom:20px;
+	}
+	
+	/* Post header */
+	.post-header h2 a, .post-header h1 {
+		font-size:19px;
+		letter-spacing:2px;
+	}
+	
+	.post-header h2, .post-header h1 {
+		max-width:100%;
+	}
+	
+	/* post share */
+	.post-share-box {
+		width:100% !important;
+		border-left:none;
+		border-bottom:1px solid #e5e5e5;
+	}
+	.post-share-box:last-child {
+		border-bottom:none;
+	}
+	
+	/* Author box */
+	.author-img {
+		margin-right:16px;
+	}
+	.author-img img {
+		max-width:60px;
+		height:auto;
+	}
+	
+	/* Footer */
+	#footer-social a span {
+		display:none;
+	}
+	#footer-social a {
+		font-size:18px;
+		margin:0 10px;
+	}
+	
+	/* Instagram */
+	#instagram-footer ul.instagram-pics > li {
+		width:25% !important;
+	}
+	#instagram-footer ul.instagram-pics > li:nth-child(8), #instagram-footer ul.instagram-pics > li:nth-child(7), #instagram-footer ul.instagram-pics > li:nth-child(6), #instagram-footer ul.instagram-pics > li:nth-child(5) {
+		display:none;
+	}
+	
+}
+
+@media only screen and (min-width: 495px) and (max-width: 768px) {
+	
+	.container { width:480px; }
+	
+	/* List layout */
+	.list-item .post-img img { max-width:150px; }
+	.list-item .post-img { margin-right:22px; }
+	.list-item .post-header h2 a { font-size:17px; }
+	.list-item .post-header h2 { margin-bottom:8px; }
+	#main.fullwidth .list-item .post-img img { max-width:150px; }
+	
+	/* Featured slider */
+	.feat-item {
+		height:300px;
+	}
+	.feat-overlay h2 {
+		font-size:17px;
+	}
+	.feat-inner {
+		max-width:70%;
+	}
+	
+	/* Promo Boxes */
+	.promo-item {
+		width:100%;
+		height:200px;
+		margin-bottom:30px;
+	}
+	
+	/* Related items */
+	.item-related, #main.fullwidth .item-related {
+		width:148px;
+		margin-right:18px;
+	}
+	
+	/* Author Box */
+	.author-img img {
+		max-width:70px;
+		height:auto;
+	}
+	
+	/* Footer */
+	#footer-social a {
+		font-size:18px;
+		margin:0 18px;
+	}
+	
 }

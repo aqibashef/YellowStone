@@ -66,10 +66,6 @@ function themewagon_load_scripts() {
 	wp_enqueue_style('fontawesome-css');
 	wp_enqueue_style('bxslider-css');
 	
-	if(!get_theme_mod('ys_responsive')) {
-	wp_enqueue_style('responsive');
-	}
-
 	// Fonts
 	wp_enqueue_style('default_body_font', 'http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext');
 	wp_enqueue_style('default_heading_font', 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');

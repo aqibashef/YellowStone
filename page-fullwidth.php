@@ -7,9 +7,9 @@
 	
 	<div class="container">
 		
-		<div id="content">
+		<div class="row">
 		
-			<div id="main" class="fullwidth">
+			<div class="col-md-12 fullwidth">
 			
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				

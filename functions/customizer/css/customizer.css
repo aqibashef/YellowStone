@@ -44,3 +44,7 @@
 	font-style:italic;
 	color:#888;
 }
+
+#customize-controls .container {
+    width: auto !important;
+}

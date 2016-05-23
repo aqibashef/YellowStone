@@ -13,17 +13,23 @@
 			
 			<?php get_template_part('inc/promo/promo'); ?>
 		
-			<div id="main">
-			
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="row">
+		
+				<div class="col-sm-8">
 				
-					<?php get_template_part('content', 'page'); ?>
-						
-				<?php endwhile; ?>
-				
-				<?php endif; ?>
-				
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					
+						<?php get_template_part('content', 'page'); ?>
+							
+					<?php endwhile; ?>
+					
+					<?php endif; ?>
+				</div>
+
+				<div class="col-sm-4">
+					<?php get_sidebar(); ?>					
+				</div><!--/.col-sm-4-->
+
 			</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
