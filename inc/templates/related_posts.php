@@ -22,20 +22,22 @@ if ($categories) {
 	$my_query = new wp_query( $args );
 	if( $my_query->have_posts() ) { ?>
 		<div class="post-related"><div class="post-box"><h4 class="post-box-title"><span><?php _e('You Might Also Like', 'themewagon'); ?></span></h4></div>
-		<?php while( $my_query->have_posts() ) {
-			$my_query->the_post();?>
-				<div class="item-related">
-					
-					<?php if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
-					<a href="<?php echo get_permalink() ?>"><?php the_post_thumbnail('misc-thumb'); ?></a>
-					<?php endif; ?>
-					
-					<h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<span class="date"><?php the_time( get_option('date_format') ); ?></span>
-					
-				</div>
-		<?php
-		}
+		<div class="row">
+			<?php while( $my_query->have_posts() ) {
+				$my_query->the_post();?>
+					<div class="col-sm-4 item-related">
+						
+						<?php if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
+						<a href="<?php echo get_permalink() ?>"><?php the_post_thumbnail('misc-thumb'); ?></a>
+						<?php endif; ?>
+						
+						<h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<span class="date"><?php the_time( get_option('date_format') ); ?></span>
+						
+					</div>
+			<?php
+			}
+		echo '</div>';
 		echo '</div>';
 	}
 }
