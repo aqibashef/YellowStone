@@ -105,8 +105,9 @@ a {
     position: relative;
     top: 2px;
 }
-#nav-wrapper .menu li a:hover {
+#nav-wrapper .menu li a:hover, #nav-wrapper .menu li a:focus {
 	color:#999;
+	outline: none;
 }
 
 #nav-wrapper .menu > li > a:hover{
@@ -140,7 +141,7 @@ a {
 		font-size:10px;
 		letter-spacing:1px;
 		padding: 6px 10px;
-		min-width: 175px;
+		min-width: 200px;
 		line-height:20px;
 		-o-transition:.25s;
 		-ms-transition:.25s;
@@ -161,6 +162,8 @@ a {
 	#nav-wrapper .menu ul ul a:hover {
 		color: #fff;
 		background:#333;
+		text-decoration: none;
+		padding-left: 16px;
 	}
 
 	#nav-wrapper ul.menu li:hover > ul,
@@ -432,14 +435,15 @@ ul.sp-grid {
     list-style: none;
 }
 
-ul.sp-grid > li:nth-child(2n+1) {
+ul.sp-grid > li:nth-child(odd) {
     clear: left;
 }
-.full_grid ul.sp-grid > li:nth-child(2n+1){
-	clear: none;
-}
-.full_grid ul.sp-grid > li:nth-child(3n+1) {
+
+.full_grid ul.sp-grid > li:nth-child(even) {
     clear: left;
+}
+.full_grid ul.sp-grid > li:nth-child(odd) {
+    clear: none;
 }
 
 .post-header {

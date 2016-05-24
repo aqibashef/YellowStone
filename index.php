@@ -11,7 +11,14 @@
 		<?php endif; ?>
 		
 		<div class="row">
-			<div class="<?php if(get_theme_mod('ys_sidebar_homepage') == true) { ?>col-sm-12 fullwidth <?php } else {?> col-sm-8 <?php } if(get_theme_mod('ys_home_layout') == 'full_grid') echo 'full_grid'?>" >
+			<div class="<?php
+							if(get_theme_mod('ys_sidebar_homepage') == true) { 
+								echo 'col-sm-12 fullwidth';
+							} else {
+								echo 'col-sm-8'; 
+							} 
+							if(get_query_var('paged') == 0 && get_theme_mod('ys_home_layout') == 'full_grid') echo ' full_grid';
+						?>">
 				
 					<?php $index = 0; //counting posts ?>
 

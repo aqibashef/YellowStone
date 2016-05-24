@@ -2,7 +2,7 @@
 			
 	<div class="sideslides">
 	
-		<div class="bxslider">
+		<div class="bxslider clearfix">
 		
 			<?php
 				
