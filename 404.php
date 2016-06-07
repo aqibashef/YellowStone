@@ -9,7 +9,7 @@
 				<div class="error-page">
 					
 					<h1>404</h1>
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'themewagon' ); ?></p>
+					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'yellowstone' ); ?></p>
 					<?php get_search_form(); ?>
 					
 				</div>

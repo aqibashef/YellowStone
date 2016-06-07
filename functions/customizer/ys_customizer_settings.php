@@ -116,63 +116,79 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 
 		// General
 		$wp_customize->add_setting(
-			'ys_favicon'
+			'ys_favicon',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'esc_url_raw'
+			)
 		);
 		
 		$wp_customize->add_setting(
 	        'ys_home_layout',
 	        array(
-	            'default'     => 'full'
+	            'default'     => 'full',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
 		$wp_customize->add_setting(
 	        'ys_archive_layout',
 	        array(
-	            'default'     => 'full'
+	            'default'     => 'full',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
 		$wp_customize->add_setting(
 	        'ys_sidebar_homepage',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
 		$wp_customize->add_setting(
 	        'ys_sidebar_post',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_sidebar_archive',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_summary',
 	        array(
-	            'default'     => 'full'
+	            'default'     => 'full',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
 		// Header & Logo
 		$wp_customize->add_setting(
-	        'ys_logo'
+	        'ys_logo',
+	        array(
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
+	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_header_padding_top',
 	        array(
-	            'default'     => '56'
+	            'default'     => '56',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_header_padding_bottom',
 	        array(
-	            'default'     => '56'
+	            'default'     => '56',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -180,13 +196,15 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_topbar_social_check',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_topbar_search_check',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -194,22 +212,29 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_featured_slider',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
-	        'ys_featured_cat'
+	        'ys_featured_cat',
+	        array(
+	        	'default' => '',
+	        	'sanitize_callback' => 'esc_url_raw'
+	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_featured_id',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_featured_slider_slides',
 	        array(
-	            'default'     => '5'
+	            'default'     => '5',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -217,58 +242,78 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_promo',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo1_title',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
-	        'ys_promo1_image'
+	        'ys_promo1_image',
+	        array(
+	        	'default' => '',
+	        	'sanitize_callback' => 'esc_url_raw'
+	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo1_url',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo2_title',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
-	        'ys_promo2_image'
+	        'ys_promo2_image',
+	        array(
+	        	'default' => '',
+	        	'sanitize_callback' => 'esc_url_raw'
+	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo2_url',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo3_title',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
-	        'ys_promo3_image'
+	        'ys_promo3_image',
+	        array(
+	        	'default' => '',
+	        	'sanitize_callback' => 'esc_url_raw'
+	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo3_url',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_promo_border',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -276,61 +321,71 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_post_tags',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_author',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_related',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_share',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_share_author',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 	    $wp_customize->add_setting(
 	        'ys_post_share_author_avatar',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_comment_link',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_thumb',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_date',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_post_cat',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -338,7 +393,8 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_page_share',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -347,85 +403,99 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_facebook',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_twitter',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_instagram',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_pinterest',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_tumblr',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_bloglovin',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_tumblr',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_google',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_youtube',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 	    $wp_customize->add_setting(
 	        'ys_dribbble',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 	    $wp_customize->add_setting(
 	        'ys_soundcloud',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 	    $wp_customize->add_setting(
 	        'ys_vimeo',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_linkedin',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_rss',
 	        array(
-	            'default'     => ''
+	            'default'     => '',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -433,13 +503,15 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 	        'ys_footer_copyright',
 	        array(
-	            'default'     => '&copy; 2016 - ThemeWagon. All Rights Reserved. Designed & Developed by <a href="http://themewagon.com">themewagon.com</a>'
+	        	'sanitize_callback' => 'esc_url_raw',
+	            'default' => '&copy; 2016 - ThemeWagon. All Rights Reserved. Designed & Developed by <a href="http://themewagon.com">themewagon.com</a>'
 	        )
 	    );
 		$wp_customize->add_setting(
 	        'ys_footer_share',
 	        array(
-	            'default'     => false
+	            'default'     => false,
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 		
@@ -449,71 +521,82 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_topbar_bg',
 				array(
-					'default'     => '#161616'
+					'default'     => '#161616',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 
 			$wp_customize->add_setting(
 				'ys_topbar_nav_color',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_topbar_nav_color_hover',
 				array(
-					'default'     => '#999999'
+					'default'     => '#999999',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
 			$wp_customize->add_setting(
 				'ys_drop_bg',
 				array(
-					'default'     => '#161616'
+					'default'     => '#161616',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_border',
 				array(
-					'default'     => '#333333'
+					'default'     => '#333333',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_text_color',
 				array(
-					'default'     => '#999999'
+					'default'     => '#999999',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_text_hover_bg',
 				array(
-					'default'     => '#333333'
+					'default'     => '#333333',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_drop_text_hover_color',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
 			$wp_customize->add_setting(
 				'ys_topbar_social_color',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_topbar_social_color_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
 			$wp_customize->add_setting(
 				'ys_topbar_search_magnify',
 				array(
-					'default'     => '#888888'
+					'default'     => '#888888',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
@@ -521,19 +604,22 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_mobile_bg',
 				array(
-					'default'     => '#161616'
+					'default'     => '#161616',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_mobile_text',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_mobile_icon',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
@@ -541,67 +627,78 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_sidebar_title_bg',
 				array(
-					'default'     => '#161616'
+					'default'     => '#161616',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_title_arrow',
 				array(
-					'default'     => false
+					'default'     => false,
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_title_text',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_social_icon',
 				array(
-					'default'     => '#000000'
+					'default'     => '#000000',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_social_icon_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_bg',
 				array(
-					'default'     => '#f1f1f1'
+					'default'     => '#f1f1f1',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_text',
 				array(
-					'default'     => '#444444'
+					'default'     => '#444444',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_button_bg',
 				array(
-					'default'     => '#161616'
+					'default'     => '#161616',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_button_text',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_button_bg_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_sidebar_newsletter_button_text_hover',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
@@ -609,37 +706,43 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_footer_bg',
 				array(
-					'default'     => '#161616'
+					'default'     => '#161616',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_footer_social',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_footer_social_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_footer_social_line',
 				array(
-					'default'     => '#313131'
+					'default'     => '#313131',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_footer_copyright_color',
 				array(
-					'default'     => '#888888'
+					'default'     => '#888888',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_footer_copyright_link',
 				array(
-					'default'     => '#ffffff'
+					'default'     => '#ffffff',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
@@ -647,61 +750,71 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_post_title',
 				array(
-					'default'     => '#000000'
+					'default'     => '#000000',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_title_divider',
 				array(
-					'default'     => '#000000'
+					'default'     => '#000000',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_text',
 				array(
-					'default'     => '#242424'
+					'default'     => '#242424',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_h',
 				array(
-					'default'     => '#242424'
+					'default'     => '#242424',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_readmore_text',
 				array(
-					'default'     => '#000000'
+					'default'     => '#000000',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_readmore_text_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_readmore_line',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_readmore_line_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_share_color',
 				array(
-					'default'     => '#000000'
+					'default'     => '#000000',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			$wp_customize->add_setting(
 				'ys_post_share_color_hover',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
@@ -709,13 +822,18 @@ function themewagon_register_theme_customizer( $wp_customize ) {
 			$wp_customize->add_setting(
 				'ys_accent_color',
 				array(
-					'default'     => '#C39F76'
+					'default'     => '#C39F76',
+					'sanitize_callback' => 'esc_url_raw'
 				)
 			);
 			
 			// Custom CSS
 			$wp_customize->add_setting(
-				'ys_custom_css'
+				'ys_custom_css',
+				array(
+					'default' => '',
+					'sanitize_callback' == 'esc_url_raw'
+				)
 			);
 		
 		

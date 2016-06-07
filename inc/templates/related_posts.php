@@ -21,7 +21,7 @@ if ($categories) {
 
 	$my_query = new wp_query( $args );
 	if( $my_query->have_posts() ) { ?>
-		<div class="post-related"><div class="post-box"><h4 class="post-box-title"><span><?php _e('You Might Also Like', 'themewagon'); ?></span></h4></div>
+		<div class="post-related"><div class="post-box"><h4 class="post-box-title"><span><?php _e('You Might Also Like', 'yellowstone'); ?></span></h4></div>
 		<div class="row">
 			<?php while( $my_query->have_posts() ) {
 				$my_query->the_post();?>

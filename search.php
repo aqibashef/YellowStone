@@ -8,8 +8,8 @@
 			
 				<div class="archive-box">
 	
-					<span><?php _e( 'Search results for', 'themewagon' ); ?></span>
-					<h1><?php printf( __( '%s', 'themewagon' ), get_search_query() ); ?></h1>
+					<span><?php _e( 'Search results for', 'yellowstone' ); ?></span>
+					<h1><?php printf( __( '%s', 'yellowstone' ), get_search_query() ); ?></h1>
 					
 				</div>
 			

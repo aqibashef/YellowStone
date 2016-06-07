@@ -29,7 +29,7 @@
 					<div class="feat-inner">
 						<span class="cat"><?php the_category(' '); ?></span>
 						<h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<a href="<?php echo get_permalink(); ?>" class="btn feat-more"><?php _e( 'Read More', 'themewagon' ); ?></a>
+						<a href="<?php echo get_permalink(); ?>" class="btn feat-more"><?php _e( 'Read More', 'yellowstone' ); ?></a>
 					</div>
 				</div>
 				

@@ -16,9 +16,9 @@ class themewagon_latest_news_widget extends WP_Widget {
 	 */
 	public function __construct() {
 		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'themewagon_latest_news_widget', 'description' => __('A widget that displays your latest posts from all categories or a certain', 'themewagon_latest_news_widget') );
+		$widget_ops = array( 'classname' => 'themewagon_latest_news_widget', 'description' => __('A widget that displays your latest posts from all categories or a certain', 'yellowstone') );
 
-		parent::__construct( 'themewagon_latest_news_widget', 'Yellowstone: Latest Posts', $widget_ops );
+		parent::__construct( 'yellowstone', 'Yellowstone: Latest Posts', $widget_ops );
 	}
 
 	/**
@@ -97,12 +97,12 @@ class themewagon_latest_news_widget extends WP_Widget {
 	function form( $instance ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 'title' => __('Latest Posts', 'themewagon'), 'number' => 5, 'categories' => '');
+		$defaults = array( 'title' => __('Latest Posts', 'yellowstone'), 'number' => 5, 'categories' => '');
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 		<!-- Widget Title: Text Input -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'themewagon'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'yellowstone'); ?></label>
 			<input  type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>"  />
 		</p>
 		
@@ -120,7 +120,7 @@ class themewagon_latest_news_widget extends WP_Widget {
 		
 		<!-- Number of posts -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Number of posts to show:', 'themewagon'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Number of posts to show:', 'yellowstone'); ?></label>
 			<input  type="text" class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" value="<?php echo $instance['number']; ?>" size="3" />
 		</p>
 

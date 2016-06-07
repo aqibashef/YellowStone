@@ -7,8 +7,8 @@
 			
 				<div class="archive-box">
 	
-					<span><?php _e( 'Browsing Tag', 'themewagon' ); ?></span>
-					<h1><?php printf( __( '%s', 'themewagon' ), single_tag_title( '', false ) ); ?></h1>
+					<span><?php _e( 'Browsing Tag', 'yellowstone' ); ?></span>
+					<h1><?php printf( __( '%s', 'yellowstone' ), single_tag_title( '', false ) ); ?></h1>
 					
 				</div>
 			

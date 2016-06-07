@@ -22,7 +22,22 @@ if ( !function_exists('themewagon_theme_setup') ) {
 		);
 		
 		// Localization support
-		load_theme_textdomain('themewagon', get_template_directory() . '/lang');
+		load_theme_textdomain('yellowstone', get_template_directory() . '/lang');
+
+
+		//Title Tag
+		add_theme_support( 'title-tag' );
+
+		if ( ! function_exists( '_wp_render_title_tag' ) ) {
+			function theme_slug_render_title() {
+		?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
+			}
+			add_action( 'wp_head', 'theme_slug_render_title' );
+		}
+
+
 		
 		// Post formats
 		add_theme_support( 'post-formats', array( 'gallery', 'video', 'audio' ) );
@@ -140,13 +155,13 @@ if ( function_exists('register_sidebar') ) {
 				
 				<div class="comment-text">
 					<span class="reply">
-						<?php comment_reply_link(array_merge( $args, array('reply_text' => __('Reply', 'themewagon'), 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment->comment_ID); ?>
-						<?php edit_comment_link(__('Edit', 'themewagon')); ?>
+						<?php comment_reply_link(array_merge( $args, array('reply_text' => __('Reply', 'yellowstone'), 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment->comment_ID); ?>
+						<?php edit_comment_link(__('Edit', 'yellowstone')); ?>
 					</span>
 					<h6 class="author"><?php echo get_comment_author_link(); ?></h6>
-					<span class="date"><?php printf(__('%1$s at %2$s', 'themewagon'), get_comment_date(),  get_comment_time()) ?></span>
+					<span class="date"><?php printf(__('%1$s at %2$s', 'yellowstone'), get_comment_date(),  get_comment_time()) ?></span>
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em><i class="icon-info-sign"></i> <?php _e('Comment awaiting approval', 'themewagon'); ?></em>
+						<em><i class="icon-info-sign"></i> <?php _e('Comment awaiting approval', 'yellowstone'); ?></em>
 						<br />
 					<?php endif; ?>
 					<?php comment_text(); ?>
@@ -169,8 +184,8 @@ function themewagon_pagination() {
 	
 	<div class="pagination">
 
-		<div class="older"><?php next_posts_link(__( '<i class="fa fa-angle-double-left"></i>', 'themewagon')); ?></div>
-		<div class="newer"><?php previous_posts_link(__( '<i class="fa fa-angle-double-right"></i>', 'themewagon')); ?></div>
+		<div class="older"><?php next_posts_link(__( '<i class="fa fa-angle-double-left"></i>', 'yellowstone')); ?></div>
+		<div class="newer"><?php previous_posts_link(__( '<i class="fa fa-angle-double-right"></i>', 'yellowstone')); ?></div>
 		
 	</div>
 					
@@ -226,7 +241,7 @@ function themewagon_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'themewagon' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'yellowstone' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -307,8 +322,8 @@ function my_theme_register_required_plugins() {
 		// This is an example of how to include a plugin pre-packaged with a theme
 		array(
 			'name'     				=> 'Vafpress Post Formats UI', // The plugin name
-			'slug'     				=> 'vafpress-post-formats-ui-develop', // The plugin slug (typically the folder name)
-			'source'   				=> get_stylesheet_directory() . '/plugins/vafpress-post-formats-ui-develop.zip', // The plugin source
+			'slug'     				=> 'vafpress-post-formats-ui', // The plugin slug (typically the folder name)
+			'source'   				=> 'https://github.com/vafour/vafpress-post-formats-ui/archive/1.3.1.zip', // The plugin source
 			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -364,8 +379,6 @@ function my_theme_register_required_plugins() {
 
 	);
 
-	// Change this to your theme text domain, used for internationalising strings
-	$theme_text_domain = 'tgmpa';
 
 	/**
 	 * Array of configuration settings. Amend each line as needed.
@@ -375,32 +388,30 @@ function my_theme_register_required_plugins() {
 	 * end of each line for what each argument will be.
 	 */
 	$config = array(
-		'domain'       		=> $theme_text_domain,         	// Text domain - likely want to be the same as your theme.
+		'domain'       		=> 'yellowstone',         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
-		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
-		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
 		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
 		'message' 			=> '',							// Message to output right before the plugins table
 		'strings'      		=> array(
-			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
-			'menu_title'                       			=> __( 'Install Plugins', $theme_text_domain ),
-			'installing'                       			=> __( 'Installing Plugin: %s', $theme_text_domain ), // %1$s = plugin name
-			'oops'                             			=> __( 'Something went wrong with the plugin API.', $theme_text_domain ),
-			'notice_can_install_required'     			=> _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ), // %1$s = plugin name(s)
-			'notice_can_install_recommended'			=> _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ), // %1$s = plugin name(s)
-			'notice_cannot_install'  					=> _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ), // %1$s = plugin name(s)
-			'notice_can_activate_required'    			=> _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ), // %1$s = plugin name(s)
-			'notice_can_activate_recommended'			=> _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ), // %1$s = plugin name(s)
-			'notice_cannot_activate' 					=> _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ), // %1$s = plugin name(s)
-			'notice_ask_to_update' 						=> _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ), // %1$s = plugin name(s)
-			'notice_cannot_update' 						=> _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ), // %1$s = plugin name(s)
-			'install_link' 					  			=> _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
-			'activate_link' 				  			=> _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-			'return'                           			=> __( 'Return to Required Plugins Installer', $theme_text_domain ),
-			'plugin_activated'                 			=> __( 'Plugin activated successfully.', $theme_text_domain ),
-			'complete' 									=> __( 'All plugins installed and activated successfully. %s', $theme_text_domain ), // %1$s = dashboard link
+			'page_title'                       			=> __( 'Install Required Plugins', 'yellowstone' ),
+			'menu_title'                       			=> __( 'Install Plugins', 'yellowstone' ),
+			'installing'                       			=> __( 'Installing Plugin: %s', 'yellowstone' ), // %1$s = plugin name
+			'oops'                             			=> __( 'Something went wrong with the plugin API.', 'yellowstone' ),
+			'notice_can_install_required'     			=> _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'yellowstone'), // %1$s = plugin name(s)
+			'notice_can_install_recommended'			=> _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'yellowstone' ), // %1$s = plugin name(s)
+			'notice_cannot_install'  					=> _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'yellowstone' ), // %1$s = plugin name(s)
+			'notice_can_activate_required'    			=> _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'yellowstone' ), // %1$s = plugin name(s)
+			'notice_can_activate_recommended'			=> _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'yellowstone' ), // %1$s = plugin name(s)
+			'notice_cannot_activate' 					=> _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'yellowstone' ), // %1$s = plugin name(s)
+			'notice_ask_to_update' 						=> _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'yellowstone'), // %1$s = plugin name(s)
+			'notice_cannot_update' 						=> _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'yellowstone' ), // %1$s = plugin name(s)
+			'install_link' 					  			=> _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'yellowstone' ),
+			'activate_link' 				  			=> _n_noop( 'Activate installed plugin', 'Activate installed plugins', 'yellowstone' ),
+			'return'                           			=> __( 'Return to Required Plugins Installer', 'yellowstone' ),
+			'plugin_activated'                 			=> __( 'Plugin activated successfully.', 'yellowstone' ),
+			'complete' 									=> __( 'All plugins installed and activated successfully. %s', 'yellowstone' ), // %1$s = dashboard link
 			'nag_type'									=> 'updated' // Determines admin notice type - can only be 'updated' or 'error'
 		)
 	);

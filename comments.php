@@ -3,7 +3,7 @@
 	<?php 
 		if ( comments_open() ) :
 		echo '<div class="post-box"><h4 class="post-box-title"><span>';
-		comments_number(__('No Comments','themewagon'), __('1 Comment','themewagon'), '% ' . __('Comments','themewagon') );
+		comments_number(__('No Comments','yellowstone'), __('1 Comment','yellowstone'), '% ' . __('Comments','yellowstone') );
 		echo '</span></h4></div>';
 		endif;
 
@@ -30,9 +30,9 @@
 			'comment_notes_after'	=> '',
 			'logged_in_as' 			=> '',
 			'comment_notes_before' 	=> '',
-			'title_reply'			=> __('Leave a Reply', 'themewagon'),
-			'cancel_reply_link'		=> __('Cancel Reply', 'themewagon'),
-			'label_submit'			=> __('Post Comment', 'themewagon')
+			'title_reply'			=> __('Leave a Reply', 'yellowstone'),
+			'cancel_reply_link'		=> __('Cancel Reply', 'yellowstone'),
+			'label_submit'			=> __('Post Comment', 'yellowstone')
 		));
 	 ?>
 

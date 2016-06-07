@@ -7,7 +7,7 @@
 			
 				<div class="archive-box">
 	
-					<span><?php _e( 'All Posts By', 'themewagon' ); ?></span>
+					<span><?php _e( 'All Posts By', 'yellowstone' ); ?></span>
 					<h1><?php the_post(); echo get_the_author(); ?></h1>
 					
 				</div>

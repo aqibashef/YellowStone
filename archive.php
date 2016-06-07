@@ -9,19 +9,19 @@
 	
 					<?php
 						if ( is_day() ) :
-							echo _e( '<span>Daily Archives</span>', 'themewagon' );
-							printf( __( '<h1>%s</h1>', 'themewagon' ), get_the_date() );
+							echo _e( '<span>Daily Archives</span>', 'yellowstone' );
+							printf( __( '<h1>%s</h1>', 'yellowstone' ), get_the_date() );
 
 						elseif ( is_month() ) :
-							echo _e( '<span>Monthly Archives</span>', 'themewagon' );
-							printf( __( '<h1>%s</h1>', 'themewagon' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'themewagon' ) ) );
+							echo _e( '<span>Monthly Archives</span>', 'yellowstone' );
+							printf( __( '<h1>%s</h1>', 'yellowstone' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'yellowstone' ) ) );
 
 						elseif ( is_year() ) :
-							echo _e( '<span>Yearly Archives</span>', 'themewagon' );
-							printf( __( '<h1>%s</h1>', 'themewagon' ), get_the_date( _x( 'Y', 'yearly archives date format', 'themewagon' ) ) );
+							echo _e( '<span>Yearly Archives</span>', 'yellowstone' );
+							printf( __( '<h1>%s</h1>', 'yellowstone' ), get_the_date( _x( 'Y', 'yearly archives date format', 'yellowstone' ) ) );
 
 						else :
-							_e( '<h1>Archives</h1>', 'themewagon' );
+							_e( '<h1>Archives</h1>', 'yellowstone' );
 
 						endif;
 					?>

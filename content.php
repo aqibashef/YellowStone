@@ -20,7 +20,7 @@
 			<?php endif; ?>
 
 			<?php if(!get_theme_mod('ys_post_date')) : ?>
-			<div class="post-date"><?php _e( 'Posted on', 'themewagon' ); ?> <?php the_time( get_option('date_format') ); ?></div>
+			<div class="post-date"><?php _e( 'Posted on', 'yellowstone' ); ?> <?php the_time( get_option('date_format') ); ?></div>
 			<?php endif; ?>
 		</div>
 		
@@ -101,11 +101,11 @@
 			<?php if(get_theme_mod('ys_post_summary') == 'excerpt') : ?>
 				
 				<p><?php echo ys_string_limit_words(get_the_excerpt(), 80); ?>&hellip;</p>
-				<p><a href="<?php echo get_permalink() ?>" class="more-link"><span class="more-button"><?php _e( 'Continue Reading <span>&raquo;</span>', 'themewagon' ); ?></span></a>
+				<p><a href="<?php echo get_permalink() ?>" class="more-link"><span class="more-button"><?php _e( 'Continue Reading <span>&raquo;</span>', 'yellowstone' ); ?></span></a>
 				
 			<?php else : ?>
 				
-				<?php the_content(__('Continue Reading<span class="more-line"></span>', 'themewagon')); ?>
+				<?php the_content(__('Continue Reading<span class="more-line"></span>', 'yellowstone')); ?>
 				
 			<?php endif; ?>
 		
