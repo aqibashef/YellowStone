@@ -1,7 +1,7 @@
 /*
 Theme Name: YellowStone
 Theme URI: https://wordpress.org/themes/yellowstone/
-Description: The WordPress Theme for Bloggers
+Description: YelloStone is crafted specially for bloggers in mind. Impress your readers and visitors with aesthetic design, nice typography and clean design. It has stunning sliders, promo boxes, advertisement widgets, color options and much more.
 Author: ThemeWagon Team
 Author URI: https://themewagon.com/
 Text Domain: yellowstone
@@ -107,7 +107,7 @@ a {
     position: relative;
     top: 2px;
 }
-#nav-wrapper .menu li a:hover, #nav-wrapper .menu li a:focus {
+#nav-wrapper .menu li a:hover,Â #nav-wrapper .menu li a:focus {
 	color:#999;
 	outline: none;
 }
@@ -584,7 +584,7 @@ p.lead:first-letter {
 	list-style:decimal;
 }
 
-.sticky.post .post-header { border:1px dashed #eee; padding:20px 0; }
+.sticky.post {border: none;background: #FFFFDC;padding: 30px;}
 .bypostauthor  {}
 .post-entry pre {
 	overflow:auto;

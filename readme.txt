@@ -1,36 +1,33 @@
-=== Twenty Sixteen ===
-Contributors: the WordPress team
+=== YellowStone ===
+Contributors: ThemeWagon Team
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.5
+Tested up to: WordPress 4.5.2
 Version: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, editor-style, featured-images, flexible-header,  post-formats, sticky-post, threaded-comments, translation-ready
 
 == Description ==
-Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
+YelloStone is crafted specially for bloggers in mind. Impress your readers and visitors with aesthetic design, nice typography and clean design. It has stunning sliders, promo boxes, advertisement widgets, color options and much more.
 
 * Mobile-first, Responsive Layout
 * Custom Colors
-* Custom Header
 * Social Links
 * Post Formats
-* The GPL v2.0 or later license. :) Use it to make something cool.
 
-For more information about Twenty Sixteen please go to https://codex.wordpress.org/Twenty_Sixteen.
+For more information about YellowStone please go to https://themewagon.com/themes/blazing-fast-responsive-wordpress-blog-theme-yellowstone/.
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Sixteen in the search form and press the 'Enter' key on your keyboard.
+2. Type in YellowStone in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://codex.wordpress.org/Twenty_Sixteen for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Copyright ==
 
-Twenty Sixteen WordPress Theme, Copyright 2014-2015 WordPress.org
-Twenty Sixteen is distributed under the terms of the GNU GPL
+YellowStone WordPress Theme, Copyright 2014-2015 themewagon.com
+YellowStone is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -42,18 +39,11 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Twenty Sixteen Theme bundles the following third-party resources:
+YellowStone Theme bundles the following third-party resources:
 
-HTML5 Shiv v3.7.0, Copyright 2014 Alexander Farkas
-Licenses: MIT/GPL2
-Source: https://github.com/aFarkas/html5shiv
+Font Awsome
+Licenses: Font Awesome is fully open source and is GPL friendly. You can use it for commercial projects, open source projects, or really just about whatever you want.
+Source: http://fontawesome.io/
 
-Genericons icon font, Copyright 2013-2015 Automattic.com
-License: GNU GPL, Version 2 (or later)
-Source: http://www.genericons.com
 
-Image used in screenshot.png: A photo by Austin Schmid (https://unsplash.com/schmidy/), licensed under Creative Commons Zero(http://creativecommons.org/publicdomain/zero/1.0/)
-
-== Notes ==
-
-Only the default and dark color schemes are accessibility ready.
+Image used in screenshot.png: https://unsplash.com/, licensed under Creative Commons Zero(http://creativecommons.org/publicdomain/zero/1.0/)
